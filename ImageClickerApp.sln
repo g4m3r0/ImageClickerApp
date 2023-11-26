@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageClickerApp.UI", "ImageClickerApp.UI\ImageClickerApp.UI.csproj", "{B440AD4A-AAEA-4BBD-9851-558B52028EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageClickerApp.Common", "ImageClickerApp.Common\ImageClickerApp.Common.csproj", "{F89387E5-76C2-49A8-B9E4-BE6B58972974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B440AD4A-AAEA-4BBD-9851-558B52028EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B440AD4A-AAEA-4BBD-9851-558B52028EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B440AD4A-AAEA-4BBD-9851-558B52028EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B440AD4A-AAEA-4BBD-9851-558B52028EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89387E5-76C2-49A8-B9E4-BE6B58972974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89387E5-76C2-49A8-B9E4-BE6B58972974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89387E5-76C2-49A8-B9E4-BE6B58972974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89387E5-76C2-49A8-B9E4-BE6B58972974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

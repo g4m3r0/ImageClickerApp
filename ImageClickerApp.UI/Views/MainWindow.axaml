@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ImageClickerApp.UI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="550"
+        x:Class="ImageClickerApp.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ImageClickerApp.UI">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        
+        <Panel Grid.Row="0" Background="LightGray">
+            <Image Source="/Assets/avalonia-logo.ico" />
+        </Panel>
+        
+        <Panel Grid.Row="1" Margin="10">
+            <StackPanel Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Border Grid.Column="0" Margin="0 0 5 0" BorderBrush="DarkGray" BorderThickness="2">
+                        <Image  Source="/Assets/avalonia-logo.ico" MaxWidth="200" MaxHeight="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical">
+                        <Button Margin="0 0 0 5" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">Capture Image</Button>
+                        <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"> Browse Image</Button>
+                        <StackPanel VerticalAlignment="Bottom" Orientation="Vertical">
+                            <TextBlock Margin="0 10 0 -15" HorizontalAlignment="Center" Text="80% Match" />
+                            <Slider Margin="0" Minimum="0" Maximum="100" Value="80" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="0 10 0 -15" HorizontalAlignment="Center" Text="Repeat 1000 Times" />
+                    <Slider Margin="0" Minimum="1" Maximum="10000" Value="1000" />
+                </StackPanel>
+                
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="0 10 0 -15" HorizontalAlignment="Center" Text="100s Delay between Clicks" />
+                    <Slider Margin="0" Minimum="1" Maximum="1000" Value="100" />
+                </StackPanel>
+                
+                <TextBlock>Mouse Button Click Type</TextBlock>
+                <RadioButton GroupName="Main" IsChecked="True" Content="Left Mouse Click" />
+                <RadioButton GroupName="Main" Content="Middle Mouse Click" />
+                <RadioButton GroupName="Main" Content="Right Mouse Click" />
+            </StackPanel>
+        </Panel>
+        
+        <Panel Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Button Grid.Column="0" Margin="10 10 5 10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Start</Button>
+                <Button Grid.Column="1" Margin="10 10 5 10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Pause</Button>
+                <Button Grid.Column="2" Margin="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Stop</Button>
+            </Grid>
+        </Panel>
+    </Grid>
+</Window>
